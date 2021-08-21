@@ -7,7 +7,6 @@ class Answered extends React.Component{
         const totalVotes = optionOne.votes.length + optionTwo.votes.length
         const optionOnePrecentage = (optionOne.votes.length/totalVotes)*100
         const optionTwoPrecentage = (optionTwo.votes.length/totalVotes)*100
-        console.log(optionTwoPrecentage)
          return(
              <div className='card'>
                <div className = 'question-bar'>
