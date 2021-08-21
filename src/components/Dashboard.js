@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Question from './Question'
-import LoadingBar from 'react-redux-loading';
 
 class Dashboard extends React.Component{
   state={
@@ -16,11 +15,10 @@ class Dashboard extends React.Component{
     render(){
       const {value}=this.state
       const {unansweredQues,answeredQues}=this.props
-      console.log(this.props)
       let ansbut = value === 'answered'?'colered':'uncolored'
       let unansbut = value==='unanswered'?'colered':'uncolored'
         return(
-          <div> <LoadingBar/>
+          <div> 
             <div className='center'>
                 <button className={unansbut} onClick={this.unansweredQuestion}> 
                     Unanswerd Questions 
